@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)),url('/static/meLOGO.png');
+    background-position: center;
+    background-size:contain;
+    background-color: black;
+}
+
+.fa-bars {
+    color: white;
+    font-size: 25px;
+}
+
+.web-title {
+    padding-top: 18%;
+    color: white;
+    letter-spacing: 23px;
+    font-size: 150px;
+    line-height: 80%;
+}
+
+.info {
+    color: white;
+    font-size: 26px;
+    font-weight: lighter;
+    margin-left: 100px;
+    margin-right: 100px;
+}
