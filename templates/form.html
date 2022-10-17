@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form action="/submit" method="POST">
+        <div class="mb-3">
+            <label for="customer" class="form-label">Customer name</label>
+            <input type="text" name="customer" class="form-control" id="customer">
+            <div id="customerHelp" class="form-text">We'll never share your personal with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="rating" class="form-label">Rating of Food and Service</label>
+            <div>
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="1">1
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="2">2
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="3">3
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="4">4
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="5">5
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="6">6
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="7">7
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="8">8
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="9">9
+                <input type="radio" name="rating" class="form-check-input" id="rating" value="10">10
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="feedback">Feedback</label>
+            <textarea name="feedback" class="form-control" placeholder="Leave a comment on your experience here" id="review"></textarea>
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}
