@@ -6,7 +6,7 @@ def send_mail_test(customer, rating, feedback):
     smtp_server = 'smtp.mailtrap.io'
     login = 'e3a5118e97b1e5'
     password ='f1775a51b8a149'
-    message = f'<h3>New Review Submitted!</h3><p>{customer} has a given us a rating of: {rating} with feedback stating: {feedback}</p>'
+    message = f'<h3>New Review Submitted!</h3><p><b>{customer}</b> has a given us a rating of: <b>{rating}</b> with feedback stating: <b>{feedback}</b></p>'
     sender_email = 'manilaeateryfeedback@gmail.com'
     receiver_email = 'manilaeatery45@gmail.com'
     msg = MIMEText(message, 'html')
