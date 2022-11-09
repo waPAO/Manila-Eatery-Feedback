@@ -1,7 +1,9 @@
 from flask import Flask, request, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from send_email import send_mail_test
+from bleach import clean
 import os
+
 
 app = Flask(__name__)
 
@@ -39,9 +41,9 @@ def form():
 @app.route('/submit', methods=['POST'])
 def submit():
     if request.method == 'POST':
-        customer = request.form['customer']
-        rating = request.form['rating']
-        feedback = request.form['feedback']
+        customer = clean(request.form['customer'])
+        rating = clean(request.form['rating'])
+        feedback = clean(request.form['feedback'])
         if customer == '' or feedback == '':
             return render_template('form.html', message='Please fill out ALL required fields')
         
